@@ -7,10 +7,13 @@
   --secondary-background: #ECF3F4;
   --grey-400: #E0DED9;
   --grey-900: #333330;
+  --success: #12CFC9;
   --text-color: var(--grey-900);
   --background-color: #FCFCF7;
   --border-radius: .375rem;
+  --spacing-sm: .5rem;
   --spacing: 1rem;
+  --spacing-lg: 1.5rem;
 }
 
 body {

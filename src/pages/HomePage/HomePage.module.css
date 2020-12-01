@@ -1,0 +1,19 @@
+.HomePage {
+  padding: var(--spacing-lg);
+}
+
+.freelances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+}
+
+.freelance {
+  flex: 1 0 100%;
+}
+
+@media (min-width: 48em) {
+  .freelance {
+    flex: 1 0 auto;
+  }
+}
