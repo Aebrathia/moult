@@ -21,7 +21,7 @@ const FreelanceCard = ({ className, freelance }) => {
         {freelance.skills.length > 0 && (
           <ul className={s.skillList}>
             {freelance.skills.map((skill) => (
-              <li key={skill} className={cx(s.pill, s.skill)}>{skill}</li>)
+              <li key={skill.id} className={cx(s.pill, s.skill)}>{skill.name}</li>)
             )}
           </ul>
         )}

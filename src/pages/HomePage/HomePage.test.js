@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import HomePage from './HomePage'
 
-it('displays a list of freelances', () => {
+it('displays a list of freelances', async () => {
   render(<HomePage />)
 
-  expect(screen.getByText('Les meilleurs freelances qui soient.'))
+  expect(screen.getByText('Les meilleurs freelances qui soient.')).toBeInTheDocument()
+  expect(screen.getByText('Chargement…')).toBeInTheDocument()
 
-  expect(screen.getByText('Antoine Ribeiro')).toBeInTheDocument()
+  expect(await screen.findByText('Antoine Ribeiro')).toBeInTheDocument()
   expect(screen.getByText('Développeur Fullstack JavaScript')).toBeInTheDocument()
   expect(screen.getByText('Disponible')).toBeInTheDocument()
   expect(screen.getByText('React')).toBeInTheDocument()
