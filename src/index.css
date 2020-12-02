@@ -31,3 +31,8 @@ h5,
 h6 {
   font-weight: 700;
 }
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text);
+}

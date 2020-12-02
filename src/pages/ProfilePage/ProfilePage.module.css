@@ -1,0 +1,67 @@
+.ProfilePage {
+  background-color:#F7F7F5;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.headerDetails {
+  flex: 1 1 auto;
+}
+
+.picture {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.body {
+  padding: var(--spacing-lg);
+}
+
+.section {
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+
+.sectionTitle {
+  margin-top: 0;
+}
+
+.skillList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing);
+  padding-left: 0;
+  list-style: none;
+}
+
+.skillItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 48em) {
+  .skillList {
+    grid-template-columns: 1fr 1fr;
+  }
+}

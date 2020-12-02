@@ -1,5 +1,6 @@
 import cx from 'classnames'
 import { Link } from 'react-router-dom'
+import SkillPill from '../SkillPill/SkillPill'
 import s from './FreelanceCard.module.css'
 
 const FreelanceCard = ({ className, freelance }) => {
@@ -21,11 +22,18 @@ const FreelanceCard = ({ className, freelance }) => {
         {freelance.skills.length > 0 && (
           <ul className={s.skillList}>
             {freelance.skills.map((skill) => (
-              <li key={skill.id} className={cx(s.pill, s.skill)}>{skill.name}</li>)
+              <SkillPill key={skill.id} as="li">{skill.name}</SkillPill>)
             )}
           </ul>
         )}
-        <Link to={`/profile/${freelance.id}`} title={`Voir le profil de ${freelance.name}`}>Voir le profil</Link>
+
+        <Link
+          to={`/profile/${freelance.id}`}
+          title={`Voir le profil de ${freelance.name}`}
+          className={s.link}
+        >
+          Voir le profil
+        </Link>
       </div>
     </article>
   )
