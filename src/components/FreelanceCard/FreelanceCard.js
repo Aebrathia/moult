@@ -1,5 +1,5 @@
-import React from 'react'
 import cx from 'classnames'
+import { Link } from 'react-router-dom'
 import s from './FreelanceCard.module.css'
 
 const FreelanceCard = ({ className, freelance }) => {
@@ -25,6 +25,7 @@ const FreelanceCard = ({ className, freelance }) => {
             )}
           </ul>
         )}
+        <Link to={`/profile/${freelance.id}`} title={`Voir le profil de ${freelance.name}`}>Voir le profil</Link>
       </div>
     </article>
   )
